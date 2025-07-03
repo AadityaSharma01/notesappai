@@ -1,26 +1,26 @@
-# NotesAppAI 🧠📝
+# NotesAppAI
 
 NotesAppAI is a smart note-taking web application built with the MERN stack. It uses AI to auto-generate **titles and summaries** from the user’s note content — so you focus on your thoughts, not the formatting.
 
 ---
 
-## 🚀 Features
+## Features
 
-- ✍️ Create, edit, and delete notes
-- 🧠 AI-powered title & summary generation
-- 🌈 Clean, responsive UI
-- ⚡ Fast state management using Zustand
-- 📊 Organized notes dashboard
+- Create, edit, and delete notes
+- AI-powered title & summary generation
+- Clean, responsive UI
+- Fast state management using Zustand
+- Organized notes dashboard
 
 ---
 
-## 🖼️ Preview
+## Preview
 ![Screenshot 2025-07-04 002153](https://github.com/user-attachments/assets/7f9bde92-81fe-400c-81ce-1608d946db5d)
 ![Screenshot 2025-07-04 002136](https://github.com/user-attachments/assets/ce7dc6d5-e859-42f8-9d59-1bfdfcdc7901)
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 **Frontend**
 - React
@@ -35,7 +35,7 @@ NotesAppAI is a smart note-taking web application built with the MERN stack. It 
 
 ---
 
-## 🔧 Setup Instructions
+## Setup Instructions
 
 1. **Clone the repository**
 
@@ -64,7 +64,7 @@ MONGODB_URI=your_mongodb_connection_string
 AI_API_KEY=your_cerebras_api_key
 ```
 
-## 🏃‍♂️ Run the App
+##  Run the App
 
 If it's a monorepo (full MERN):
 
@@ -87,12 +87,12 @@ npm run server
 
 ---
 
-## 🧠 Future Enhancements
+##  Future Enhancements
 
- - 🔔 Reminders & notifications
- - 📥 Export notes to PDF/Markdown
- - 📅 Calendar integration
- - 🔍 Full-text search
- - 🧠 AI keyword tagging
+ - Reminders & notifications
+ - Export notes to PDF/Markdown
+ - Calendar integration
+ - Full-text search
+ - AI keyword tagging
 
 ---
