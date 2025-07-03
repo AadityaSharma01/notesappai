@@ -1,0 +1,23 @@
+.appmaindiv {
+    display: 'flex';
+    flex-direction: 'column';
+    justify-content: 'center';
+    align-items: 'center';
+
+    background-image: url(../assets/melonimage.jpg);
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.Navbar {
+    width: "100%";
+    padding: "1rem 2rem";
+    background-color: "#f5f5f5";
+    border-bottom: "1px solid #ddd";
+    display: "flex";
+    justify-content: "space-between";
+    align-items: "center";
+    box-sizing: "border-box";
+    position: "fixed";
+}
