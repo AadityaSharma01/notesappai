@@ -18,7 +18,7 @@ const app = express();
 const PORT = process.env.PORT || 4004;
 
 app.use(cors({
-    origin: "https://notesappai.vercel.app/",
+    origin: "https://notesappai.vercel.app",
     methods: ['GET', 'POST', 'DELETE', 'PUT'],
 }));
 
