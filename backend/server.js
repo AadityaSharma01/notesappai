@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 import path from 'path';
+import cors from 'cors';
 
 import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -15,6 +16,11 @@ import airoute from './routes/ai.route.js';
 
 const app = express();
 const PORT = process.env.PORT || 4004;
+
+app.use(cors({
+    origin: "https://notesappai.vercel.app/",
+    methods: ['GET', 'POST', 'DELETE', 'PUT'],
+}));
 
 app.use(express.json());
 app.use("/api/notes", noteroute);

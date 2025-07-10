@@ -1,48 +1,32 @@
 import { Link } from "react-router-dom";
 import React from "react";
+import styles from "../styles/navbar.module.css"
+
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
-  return (
-    <nav
-      style={{
-        width: "100%",
-        padding: "1rem 2rem",
-        backgroundColor: "#f5f5f5",
-        borderBottom: "1px solid #ddd",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        boxSizing: "border-box",
-        position: "fixed",
-      }}
-    >
-      <div style={{ fontWeight: "bold", fontSize: "18px" }}>📝 NoteApp</div>
+  const [colormode, setColormode] = useState("light")
 
-      <div style={{ display: "flex", gap: "1rem" }}>
-        <Link
-          to="/"
-          style={{
-            textDecoration: "none",
-            color: "#333",
-            fontWeight: "500",
-            fontSize: "16px"
-          }}
-        >
-          Home
-        </Link>
-        <Link
-          to="/create"
-          style={{
-            textDecoration: "none",
-            color: "#333",
-            fontWeight: "500",
-            fontSize: "16px"
-          }}
-        >
-          Create
-        </Link>
-      </div>
-    </nav>
+  useEffect(() => {
+    const saved = localStorage.getItem("theme");
+    if (saved) setColormode(saved);
+  }, [])
+
+  useEffect(() => {
+    document.body.classList.toggle("dark", colormode === "dark")
+  }, [colormode]);
+
+  return (
+    <div className="dark">
+      <nav className={styles.bar}>
+        <div className={styles.barfont}>📝 NoteApp</div>
+
+        <div style={{ display: "flex", gap: "1rem" }}>
+          <Link to="/" className={styles.link}>Home</Link>
+          <Link to="/create" className={styles.link}>Create</Link>
+        </div>
+      </nav>
+    </div>
   );
 };
 
