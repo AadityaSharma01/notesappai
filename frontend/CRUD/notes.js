@@ -1,4 +1,5 @@
 import { create } from "zustand";
+const baseURL = import.meta.env.VITE_REACT_APP_API_URL
 
 export const useNote = create((set) => ({
     notes: [],
@@ -9,7 +10,7 @@ export const useNote = create((set) => ({
             return{success: "false", message: "failed to create note"}
         }
 
-        const res = await fetch("/api/notes", {
+        const res = await fetch(`${baseURL}/api/notes`, {
             method: "POST",
             headers:{ "content-type": "application/json" },
             body: JSON.stringify(newNote)
@@ -22,14 +23,14 @@ export const useNote = create((set) => ({
     },
 
     fetchNotes: async() => {
-        const res = await fetch("/api/notes");
+        const res = await fetch(`${baseURL}/api/notes`);
         const data = await res.json();
 
         set({notes: data.data});
     },
 
     deleteNote: async(nid) => {
-        const res = await fetch(`api/notes/${nid}`, {
+        const res = await fetch(`${baseURL}/api/notes/${nid}`, {
             method: "DELETE",
         });
 
