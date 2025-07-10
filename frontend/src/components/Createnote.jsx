@@ -3,6 +3,8 @@ import { useNote } from "../../CRUD/notes";
 import styles from "../styles/createnote.module.css";
 import React from "react";
 
+const baseURL = import.meta.env.VITE_REACT_APP_API_URL;
+
 const Createnote = () => {
   const today = new Date();
   const isoDate = today.toISOString().split("T")[0]; // yyyy-mm-dd for input[type="date"]
@@ -29,7 +31,7 @@ const Createnote = () => {
 
   const handleAIgen = async () => {
     try {
-      const response = await fetch("/api/ai/title", {
+      const response = await fetch(`${baseURL}/api/ai/title`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -48,7 +50,7 @@ const Createnote = () => {
 
   const handleAIgensummary = async () => {
     try {
-      const response = await fetch("/api/ai/summary", {
+      const response = await fetch(`${baseURL}/api/ai/summary`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
