@@ -29,7 +29,7 @@ const aicomponenttitle = async (input) => {
           content: `${input}\n\nGIVE ME A NICE 2 TO 8 WORD TITLE DEPENDING ON HOW BIG THE CONTENT ABOVE IS. JUST THE TITLE, NOTHING ELSE.`,
         },
       ],
-      model: 'llama-4-scout-17b-16e-instruct',
+      model: 'llama-3.3-70b',
     });
 
     return completionCreateResponse.choices[0].message.content;
@@ -51,7 +51,7 @@ export const aicomponentsummmary = async (input) => {
           content: `${input}\n\nSummarize the content above in 2 to 4 concise sentences. Do not add anything else.`,
         },
       ],
-      model: 'llama-4-scout-17b-16e-instruct',
+      model: 'llama-3.3-70b',
     });
 
     return completionCreateResponsesummary.choices[0].message.content;
